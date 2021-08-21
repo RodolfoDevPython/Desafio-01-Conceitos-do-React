@@ -20,7 +20,7 @@ export function TaskList() {
     
     tasks.filter( task => task.title == newTaskTitle );
 
-    if (tasks.length > 0 || newTaskTitle?.trim() == "") return alert("Não foi possível criado essa task");
+    if (newTaskTitle?.trim() == "") return;
 
     setTasks([...tasks, { 
       id: Math.floor( Math.random() * 100 ),
